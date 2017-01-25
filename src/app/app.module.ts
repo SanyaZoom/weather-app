@@ -1,17 +1,20 @@
 import './rxjs-operators';
 
-import { NgModule }               from '@angular/core';
-import { BrowserModule }          from '@angular/platform-browser';
-import { FormsModule }            from '@angular/forms';
-import { HttpModule }             from '@angular/http';
-import { AppComponent }           from './app.component';
+import { NgModule }                   from '@angular/core';
+import { BrowserModule }              from '@angular/platform-browser';
+import { FormsModule }                from '@angular/forms';
+import { HttpModule }                 from '@angular/http';
+import { AppComponent }               from './app.component';
 // Components
-import { WeatherItemComponent }   from "./weather/weather-item.component";
-import { WeatherListComponent }   from "./weather/weather-list.component";
-import { WeatherSearchComponent } from "./weather/weather-search.component";
-import { SidebarComponent }       from "./sidebar.component";
+import { WeatherItemComponent }       from "./weather/weather-item.component";
+import { WeatherListComponent }       from "./weather/weather-list.component";
+import { WeatherSearchComponent }     from "./weather/weather-search.component";
+import { SidebarComponent }           from "./sidebar.component";
+import { WeatherItemHourlyComponent } from "./weather/weather-item-hourly.component";
+import { ElementComponent }           from "./weather/element.component";
+import { ChartComponent }             from "./weather/charts.component";
 // Service
-import { WeatherService }         from "./weather/weather.service";
+import { WeatherService }             from "./weather/weather.service";
 
 @NgModule({
   imports:      [
@@ -24,7 +27,10 @@ import { WeatherService }         from "./weather/weather.service";
     WeatherItemComponent,
     WeatherListComponent,
     WeatherSearchComponent,
-    SidebarComponent
+    SidebarComponent,
+    WeatherItemHourlyComponent,
+    ElementComponent,
+    ChartComponent
   ],
   providers:    [ WeatherService ],
   bootstrap:    [ AppComponent ]

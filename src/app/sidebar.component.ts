@@ -8,12 +8,12 @@ import { WeatherItem }       from "./weather/weather-item";
     selector: 'sidebar',
     template: `
         <h3>Saved Profiles</h3>
-        <button (click)="onSaveNew()">Save List to Profile</button>
-        <article class="profile" *ngFor="let profile of profiles" (click)="onLoadProfile(profile)">
+        <button (click)="onSaveNew()" class="btn btn-success" style="width: 100%; margin-top: 1%;">Save List to Profile</button>
+        <article class="profile" *ngFor="let profile of profiles" (click)="onLoadProfile(profile)" style="width: 100%; margin-top: 1%;">
             <h4>{{ profile.profileName }}</h4>
             <p>Cities: {{ profile.cities.join(', ') }}</p>
             <span class="delete" (click)="onDeleteProfile($event, profile)">X</span>
-        </article>
+        </article>            
     `,
     providers: [ProfileService],
     styleUrls: ['src/css/sidebar.css']
@@ -37,7 +37,9 @@ export class SidebarComponent implements OnInit {
                 /*.retry()*/
                 .subscribe(
                     data => {
-                        const weatherItem = new WeatherItem(data.name, data.weather[0].description.toUpperCase(), data.main.temp);
+                        const weatherItem = new WeatherItem(data.name, data.weather[0].description.toUpperCase(),
+                            data.main.temp, data.wind.speed, data.wind.deg, data.main.humidity, data.main.pressure,
+                            data.sys.country, data.coord.lat, data.coord.lon, data.weather[0].icon);
                         this._weatherService.addWeatherItem(weatherItem);
                     }
                 );
