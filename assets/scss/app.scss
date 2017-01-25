@@ -6,29 +6,24 @@ body {
 }
 
 header {
-  background-color: #3498db;
-  padding: 30px;
+  background-color: #e7e7f3;
+  padding: 20px;
   width: 100%;
-  color: white;
   text-align: center;
   font-size: 30px;
-  color: #f1c40f;
+  color: #7a9850;
 }
 
-.weather-list {
-  margin: 20px auto;
-  width: 40%;
+header h1 {
+  font-family: Monotype Corsiva;
+  text-align: left;
 }
 
 .weather-element {
   box-shadow: 1px 1px 6px #ccc;
-  padding: 10px;
-  margin: 10px 0;
 }
 
 .tooltip {
-  position: absolute;
-  padding: 3px;
   font-size: 12px;
   background-color: #eee;
   border-radius: 3px;
@@ -47,13 +42,10 @@ header {
 
 
 .weather-search {
-  margin: 20px auto;
-  width: 40%;
   text-align: center;
 
   label {
     font-weight: bold;
-    margin-right: 20px;
   }
 
   button, input {
@@ -62,28 +54,6 @@ header {
   }
 
   input {
-    padding: 3px 5px;
     outline: none;
-    width: 50%;
-    margin-right: 20px;
-  }
-
-  button {
-    background-color: #2ecc71;
-    border: none;
-    padding: 4px 8px;
-    box-shadow: 1px 1px 1px #95a5a6;
-    cursor: pointer;
-    color: white;
-  }
-
-  button:hover {
-    background-color: #27ae60;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .weather-list {
-    width: 80%;
   }
 }
