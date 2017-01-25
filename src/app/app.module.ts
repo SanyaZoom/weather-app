@@ -12,7 +12,6 @@ import { WeatherSearchComponent }     from "./weather/weather-search.component";
 import { SidebarComponent }           from "./sidebar.component";
 import { WeatherItemHourlyComponent } from "./weather/weather-item-hourly.component";
 import { ElementComponent }           from "./weather/element.component";
-import { ChartComponent }             from "./weather/charts.component";
 // Service
 import { WeatherService }             from "./weather/weather.service";
 
@@ -29,8 +28,7 @@ import { WeatherService }             from "./weather/weather.service";
     WeatherSearchComponent,
     SidebarComponent,
     WeatherItemHourlyComponent,
-    ElementComponent,
-    ChartComponent
+    ElementComponent
   ],
   providers:    [ WeatherService ],
   bootstrap:    [ AppComponent ]
