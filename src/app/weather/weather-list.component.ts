@@ -13,9 +13,6 @@ import { WeatherItemForFewDays } from "./weather-itemForFewDays";
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#execute" role="tab">Hourly</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#charts" role="tab">Charts</a>
-            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade in active" id="viewer" role="tabpanel">
@@ -23,9 +20,6 @@ import { WeatherItemForFewDays } from "./weather-itemForFewDays";
             </div>
             <div class="tab-pane fade" id="execute" role="tabpanel">
                 <weather-item-hourly *ngFor="let weatherItemHourly of weatherItemsHourly" [hourlyItem]="weatherItemHourly"></weather-item-hourly>
-            </div>
-            <div class="tab-pane fade" id="charts" role="tabpanel">
-                <charts *ngFor="let weatherItemHourly of weatherItemsHourly" [hourlyItem]="weatherItemHourly"></charts>
             </div>
         </div>
     `
